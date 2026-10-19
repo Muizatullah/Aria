@@ -23,6 +23,7 @@ import {
   Support,
   Shipping,
   Legal,
+  Product,
 } from "./pages";
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
             path="/accessibility"
             element={<Legal type="accessibility" />}
           />
+          <Route path="/product/:slug" element={<Product />} />
 
           {/* More pages coming: /product/:slug, /cart, /wishlist, /collections ... */}
         </Routes>

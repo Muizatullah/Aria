@@ -12,6 +12,7 @@ import TrackOrder from "./trackOrder/TrackOrder.jsx";
 import Support from "./support/Support.jsx";
 import Shipping from "./shipping/Shipping.jsx";
 import Legal from "./legal/Legal.jsx";
+import Product from "./product/Product.jsx"
 
 export {
     Homepage,
@@ -28,4 +29,5 @@ export {
     Support,
     Shipping,
     Legal,
+    Product,
 };

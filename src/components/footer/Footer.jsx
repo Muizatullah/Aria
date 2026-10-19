@@ -53,7 +53,7 @@ function Footer() {
               Handcrafted leather bags for women who move through the world with
               intention.
             </p>
-            <p className={styles.made}>Made in Florence. Worn everywhere.</p>
+            <p className={styles.made}>Made in Nigeria. Worn everywhere.</p>
           </div>
 
           {COLUMNS.map((column) => (

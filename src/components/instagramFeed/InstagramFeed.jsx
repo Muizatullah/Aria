@@ -7,7 +7,7 @@ import image6 from "../../assets/image6.jpeg";
 import styles from "./instagramFeed.module.css";
 
 const HANDLE = "ariadesign.ng";
-const PROFILE_URL = `https://www.instagram.com/${ariadesign.ng}`;
+const PROFILE_URL = `https://www.instagram.com/${HANDLE}`;
 
 const POSTS = [image1, image2, image3, image4, image5, image6];
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { collections } from "../../data.js";
-import styles from "./Collections.module.css";
+import styles from "./collections.module.css";
 
 function Collections() {
   return (

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import { MessageSquare, Star, Send, X } from "lucide-react";
-import { getReply, whyFor } from "./Stylist.js";
+import { getReply, whyFor } from "./stylist.js";
 import styles from "./chatWidget.module.css";
 
 const GREETING = {

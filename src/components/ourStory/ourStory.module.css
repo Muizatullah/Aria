@@ -1,0 +1,109 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 96px;
+}
+
+/* Text column */
+.title {
+  margin-top: 24px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.title em {
+  display: block;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.body {
+  margin-top: 40px;
+  max-width: 620px;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.9;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 36px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.link:hover {
+  gap: 20px;
+  color: var(--color-accent-hover);
+}
+
+/* Image column */
+.visual {
+  position: relative;
+}
+
+.visual img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-elevated);
+}
+
+/* Orange "17 Artisan Hands" badge overlapping the image's left edge */
+.badge {
+  position: absolute;
+  left: -48px;
+  bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 36px 36px 32px;
+  min-width: 238px;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: var(--shadow-lg);
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Tablet / mobile */
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .visual {
+    max-width: 560px;
+  }
+
+  .badge {
+    left: 16px;
+    bottom: 16px;
+    padding: 24px;
+    min-width: 0;
+  }
+
+  .number {
+    font-size: 2.75rem;
+  }
+}

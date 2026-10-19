@@ -1,0 +1,133 @@
+.footer {
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  padding-top: 96px;
+}
+
+/* Top: brand + link columns */
+.top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  padding-bottom: 80px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  height: 56px;
+  width: auto;
+}
+
+.tagline {
+  max-width: 290px;
+  margin-top: 28px;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.made {
+  max-width: 290px;
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(168, 165, 156, 0.6);
+}
+
+/* Link columns */
+.heading {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.column ul {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.link {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-text);
+  padding-left: 6px;
+}
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  padding: 40px 0 48px;
+  border-top: 1px solid var(--color-border);
+}
+
+.copy {
+  font-size: 1rem;
+  color: rgba(168, 165, 156, 0.55);
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+}
+
+.legalLink {
+  font-size: 1rem;
+  color: rgba(168, 165, 156, 0.7);
+  transition: color var(--transition-fast);
+}
+
+.legalLink:hover {
+  color: var(--color-text);
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .top {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 40px;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .footer {
+    padding-top: 64px;
+  }
+
+  .top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 24px;
+    padding-bottom: 56px;
+  }
+
+  .column:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 0 40px;
+  }
+}

@@ -1,0 +1,244 @@
+.page {
+  padding-bottom: 120px;
+}
+
+/* Matches the 30px inner inset used across the design */
+.inset {
+  padding-inline: 30px;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0 140px;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Photo fades into the page background at the bottom */
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.35) 0%,
+    rgba(10, 10, 10, 0.72) 55%,
+    var(--color-bg) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  margin-top: 28px;
+  font-size: clamp(3.25rem, 9.5vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Stats ---------- */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  list-style: none;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 56px 24px 48px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Six-step process ---------- */
+.process {
+  padding-top: clamp(64px, 8vw, 110px);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+  list-style: none;
+}
+
+.step {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.015);
+  transition: border-color var(--transition-base), background var(--transition-base);
+}
+
+.step:hover,
+.stepOpen {
+  border-color: rgba(232, 80, 14, 0.55);
+}
+
+.stepOpen {
+  background: rgba(232, 80, 14, 0.04);
+}
+
+.stepButton {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-height: 104px;
+  padding: 0 36px;
+  text-align: left;
+  color: var(--color-text);
+}
+
+.stepNumber {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--color-accent);
+}
+
+.stepTitle {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+}
+
+.plus {
+  flex-shrink: 0;
+  color: var(--color-accent);
+  transition: transform var(--transition-base);
+}
+
+.stepOpen .plus {
+  transform: rotate(45deg);
+}
+
+/* Smooth open/close without knowing the content height */
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows var(--transition-base), visibility var(--transition-base);
+}
+
+.stepOpen .panel {
+  grid-template-rows: 1fr;
+  visibility: visible;
+}
+
+.panelInner {
+  overflow: hidden;
+}
+
+.panelText {
+  max-width: 760px;
+  padding: 0 36px 36px 96px;
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+/* ---------- Warranty ---------- */
+.warranty {
+  padding-top: clamp(56px, 7vw, 96px);
+}
+
+.warrantyCard {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  color: #fff;
+  background: var(--color-accent);
+  border-radius: 24px;
+}
+
+.warrantyTitle {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+}
+
+.warrantyText {
+  max-width: 720px;
+  margin: 24px auto 0;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ---------- Tablet / mobile ---------- */
+@media (max-width: 960px) {
+  .inset {
+    padding-inline: 0;
+  }
+
+  .statGrid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding-bottom: 80px;
+  }
+
+  .hero {
+    padding: 56px 0 96px;
+  }
+
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .stepButton {
+    min-height: 84px;
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  .panelText {
+    padding: 0 20px 28px 20px;
+  }
+
+  .warrantyCard {
+    padding: 56px 24px;
+  }
+}

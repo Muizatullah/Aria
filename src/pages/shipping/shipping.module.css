@@ -1,0 +1,105 @@
+.page {
+  padding: 120px var(--gutter) 140px;
+}
+
+.content {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 72px;
+}
+
+.title {
+  margin-top: 28px;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* ---------- Policy sections ---------- */
+.section + .section {
+  margin-top: 72px;
+}
+
+.sectionTitle {
+  padding-bottom: 24px;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px 0 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  gap: 0 24px;
+  align-items: baseline;
+}
+
+.row dt {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+}
+
+.row dd {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Warranty card ---------- */
+.warranty {
+  margin-top: 72px;
+  padding: 36px;
+  background: rgba(232, 80, 14, 0.07);
+  border: 1px solid rgba(232, 80, 14, 0.3);
+  border-radius: 14px;
+}
+
+.warrantyTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.warranty p {
+  margin: 16px 0 0;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .page {
+    padding: 64px var(--gutter) 96px;
+  }
+
+  .header {
+    margin-bottom: 48px;
+  }
+
+  .section + .section {
+    margin-top: 56px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .warranty {
+    margin-top: 56px;
+    padding: 24px;
+  }
+}

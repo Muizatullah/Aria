@@ -1,0 +1,120 @@
+.section {
+  background: var(--color-accent);
+  color: #fff;
+  padding: 120px var(--gutter);
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.title {
+  margin-top: 32px;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.text {
+  margin-top: 20px;
+  max-width: 640px;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Form */
+.form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 48px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 68px;
+  padding: 0 24px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.input:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.input[aria-invalid="true"] {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35);
+}
+
+.button {
+  flex-shrink: 0;
+  height: 68px;
+  padding: 0 44px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--color-bg);
+  border-radius: 3px;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.button:hover {
+  background: #1f1f1f;
+  transform: translateY(-2px);
+}
+
+.note {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.error {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .section {
+    padding: 72px var(--gutter);
+  }
+
+  .form {
+    flex-direction: column;
+    margin-top: 36px;
+  }
+
+  .input,
+  .button {
+    width: 100%;
+    height: 60px;
+  }
+}

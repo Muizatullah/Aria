@@ -1,0 +1,266 @@
+/* .page {
+  padding-bottom: 120px;
+}
+
+
+.header {
+  padding: 96px 0 56px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerInner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.title {
+  margin-top: 16px;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sortWrap {
+  position: relative;
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 248px;
+  height: 56px;
+  padding: 0 56px 0 24px;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.select:hover,
+.select:focus {
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.select option {
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+
+.content {
+  padding-top: 48px;
+}
+
+.count {
+  margin-bottom: 40px;
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 36px;
+}
+
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .page {
+    padding-bottom: 80px;
+  }
+
+  .header {
+    padding: 56px 0 36px;
+  }
+
+  .headerInner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .select {
+    width: 100%;
+  }
+
+  .content {
+    padding-top: 32px;
+  }
+
+  .count {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+} */
+
+
+.page {
+  padding-bottom: 120px;
+}
+
+/* Header band */
+.header {
+  padding: 96px 0 56px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerInner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.title {
+  margin-top: 16px;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Sort dropdown */
+.sortWrap {
+  position: relative;
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 248px;
+  height: 56px;
+  padding: 0 56px 0 24px;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.select:hover,
+.select:focus {
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.select option {
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+/* Content */
+.content {
+  padding-top: 48px;
+}
+
+.count {
+  margin-bottom: 40px;
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 36px;
+}
+
+.clear {
+  margin-left: 20px;
+  font-size: 1rem;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.clear:hover {
+  color: var(--color-accent-hover);
+}
+
+.empty {
+  padding: 64px 0;
+  font-size: 1.15rem;
+}
+
+/* Tablet / mobile */
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .page {
+    padding-bottom: 80px;
+  }
+
+  .header {
+    padding: 56px 0 36px;
+  }
+
+  .headerInner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .select {
+    width: 100%;
+  }
+
+  .content {
+    padding-top: 32px;
+  }
+
+  .count {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

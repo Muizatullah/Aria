@@ -1,0 +1,555 @@
+/* 
+ 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap");
+ 
+
+:root {
+  
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #141414;
+  --color-surface: #1c1c1c;
+  --color-text: #f5f3ec;
+  --color-text-muted: #a8a59c;
+  --color-accent: #e8500e;
+  --color-accent-hover: #ff6a2a;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-success: #3ecf8e;
+  --color-danger: #ef4444;
+ 
+
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+ 
+
+  --container-max: 1440px;
+  --gutter: 40px;
+  --navbar-height: 80px;
+ 
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+ 
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+ 
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
+ 
+@media (max-width: 1100px) {
+  :root {
+    --gutter: 24px;
+  }
+}
+ 
+@media (max-width: 860px) {
+  :root {
+    --gutter: 16px;
+    --navbar-height: 68px;
+  }
+}
+ 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+ 
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+ 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+ 
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+ 
+img {
+  height: auto;
+}
+ 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+ul,
+ol {
+  list-style: none;
+}
+ 
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+ 
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+ 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+ 
+input,
+select,
+textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+ 
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-accent);
+}
+ 
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+ 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+ 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+ 
+h1 {
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-weight: 800;
+}
+ 
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+}
+ 
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+ 
+h4 {
+  font-size: 1.25rem;
+}
+ 
+p {
+  color: var(--color-text-muted);
+}
+ 
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+ 
+.section {
+  padding: 96px 0;
+}
+ 
+@media (max-width: 860px) {
+  .section {
+    padding: 64px 0;
+  }
+}
+ 
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+ 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+ 
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+ 
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+ 
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+} */
+
+
+
+/* ==========================================================================
+   ARIA — Global styles
+   Fonts, design tokens, reset and base element styles.
+   Component styles live in each component's .module.css file.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Space+Mono:wght@400;700&display=swap");
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* Colors */
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #141414;
+  --color-surface: #1c1c1c;
+  --color-text: #f5f3ec;
+  --color-text-muted: #a8a59c;
+  --color-accent: #e8500e;
+  --color-accent-hover: #ff6a2a;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-success: #3ecf8e;
+  --color-danger: #ef4444;
+
+  /* Typography */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Layout */
+  --container-max: 1440px;
+  --gutter: 40px;
+  --navbar-height: 80px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  /* Motion */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --gutter: 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --gutter: 16px;
+    --navbar-height: 68px;
+  }
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input,
+select,
+textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-accent);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+/* Small spaced-out label, e.g. "NEW COLLECTION — AUTUMN 2026" */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding: 96px 0;
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: 64px 0;
+  }
+}
+
+/* ---------- Accessibility ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}

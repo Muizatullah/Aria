@@ -1,0 +1,201 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image area */
+.media {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-sm);
+}
+
+.imageLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .media img {
+  transform: scale(1.05);
+}
+
+/* Badges */
+.badges {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.badge {
+  padding: 5px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  border-radius: 3px;
+}
+
+.badgeAccent {
+  background: rgba(232, 80, 14, 0.18);
+  color: var(--color-accent);
+  border: 1px solid rgba(232, 80, 14, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+.badgeLight {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+/* Wishlist heart */
+.heart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(6px);
+  color: var(--color-text);
+  transition: color var(--transition-fast), transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.heart:hover {
+  transform: scale(1.08);
+  background: rgba(10, 10, 10, 0.85);
+}
+
+.heartActive {
+  color: var(--color-accent);
+}
+
+/* Add to cart — slides up on hover */
+.addBtn {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 16px);
+  padding: 16px 32px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--transition-base), transform var(--transition-base),
+    background var(--transition-fast);
+}
+
+.addBtn:hover {
+  background: var(--color-accent-hover);
+}
+
+.card:hover .addBtn,
+.addBtn:focus-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Touch devices have no hover — always show the button */
+@media (hover: none) {
+  .addBtn {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Info */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.collection {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+
+.name {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.name a:hover {
+  color: var(--color-accent);
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.oldPrice {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 8px;
+  color: var(--color-accent);
+}
+
+.reviews {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Color swatches */
+.swatches {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

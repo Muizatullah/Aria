@@ -1,0 +1,123 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  overflow-y: auto;
+  padding: clamp(96px, 18vh, 170px) var(--gutter) 64px;
+  background: rgba(10, 10, 10, 0.97);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 36px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.close:hover {
+  color: var(--color-text);
+  transform: rotate(90deg);
+}
+
+.content {
+  max-width: 1008px;
+  margin: 0 auto;
+}
+
+/* Search field */
+.form {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--color-text);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--color-text);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.input:focus {
+  border: none;
+}
+
+.input::placeholder {
+  color: rgba(168, 165, 156, 0.45);
+}
+
+/* Remove the browser's own clear button on type="search" */
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* Popular searches */
+.label {
+  margin-top: 56px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.popular {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.term {
+  padding: 18px 0;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  text-align: left;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.term:hover,
+.term:focus-visible {
+  color: var(--color-text);
+  padding-left: 10px;
+}
+
+@media (max-width: 860px) {
+  .close {
+    top: 16px;
+    right: 12px;
+  }
+
+  .label {
+    margin-top: 40px;
+  }
+}

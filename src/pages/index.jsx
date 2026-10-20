@@ -1,6 +1,6 @@
 import Homepage from "./home/Homepage.jsx";
 import Shop from "./shop/Shop.jsx";
-import CollectionsPage from "./collecctionPage/CollectionPage.jsx";
+import CollectionPage from "./collectionPage/CollectionPage.jsx";
 import LookBook from "./lookBook/LookBook.jsx";
 import  OurStory  from "./ourStory/OurStory.jsx";
 import CraftsmanShip from "./craftsmanShip/CraftsmanShip.jsx";
@@ -12,12 +12,12 @@ import TrackOrder from "./trackOrder/TrackOrder.jsx";
 import Support from "./support/Support.jsx";
 import Shipping from "./shipping/Shipping.jsx";
 import Legal from "./legal/Legal.jsx";
-import Product from "./product/Product.jsx"
+import Product from "./product/Product.jsx";
 
 export {
     Homepage,
     Shop,
-    CollectionsPage,
+    CollectionPage,
     LookBook,
     OurStory,
     CraftsmanShip,

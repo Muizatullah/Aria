@@ -4,7 +4,7 @@ import { Heart, Minus, Plus, Star, Package, Check } from "lucide-react";
 import { products } from "../../data.js";
 import { useShop } from "../../context/ShopContext";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import { getExtras, colorNames, sampleReviews } from "./productExtras";
+import { getExtras, colorNames, sampleReviews } from "./productextras";
 import styles from "./product.module.css";
 
 const TABS = ["Details", "Fits", "Care"];

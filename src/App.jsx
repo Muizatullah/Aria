@@ -10,7 +10,7 @@ import ChatWidget from "./components/chatWidget/ChatWidget.jsx";
 
 import Shop from "./pages/shop/Shop";
 import {
-  CollectionsPage,
+  CollectionPage,
   Homepage,
   LookBook,
   OurStory,
@@ -45,7 +45,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/collections" element={<CollectionsPage />} />
+          <Route path="/collection" element={<CollectionPage />} />
           <Route path="/lookBook" element={<LookBook />} />
           <Route path="/our-Story" element={<OurStory />} />
           <Route path="/craftsmanShip" element={<CraftsmanShip />} />

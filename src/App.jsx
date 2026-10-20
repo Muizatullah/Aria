@@ -7,7 +7,7 @@ import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import Searchoverlay from "./components/searchoverLay/SearchoverLay.jsx";
 import ChatWidget from "./components/chatWidget/ChatWidget.jsx";
-// import HomePage from "./pages/home/Homepage";
+
 import Shop from "./pages/shop/Shop";
 import {
   CollectionsPage,
@@ -53,7 +53,6 @@ function App() {
           <Route path="/wishlist" element={<WishList />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
-          {/* <Route path="/trackOrder" element={< TrackOrder/>} /> */}
           <Route path="/track-order" element={<TrackOrder />} />
           <Route path="/support" element={<Support />} />
           <Route path="/shipping" element={<Shipping />} />
@@ -73,8 +72,6 @@ function App() {
             element={<Legal type="accessibility" />}
           />
           <Route path="/product/:slug" element={<Product />} />
-
-          {/* More pages coming: /product/:slug, /cart, /wishlist, /collections ... */}
         </Routes>
       </main>
 

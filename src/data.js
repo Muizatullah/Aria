@@ -14,8 +14,8 @@ export const products = [
     slug: "ikky-tote",
     name: "ikky Tote",
     collection: "Ikky",
-    price: 13,
-    oldPrice: 620,
+    price: 130000,
+    oldPrice: 62000,
     rating: 5,
     reviews: 124,
     badges: ["NEW", "SALE"],
@@ -28,7 +28,7 @@ export const products = [
     slug: "sonia-crossbody",
     name: "sonia Crossbody",
     collection: "sonia",
-    price: 29,
+    price: 250000,
     oldPrice: null,
     rating: 5,
     reviews: 89,
@@ -42,7 +42,7 @@ export const products = [
     slug: "leelah-clutch",
     name: "leelah Clutch",
     collection: "leelah",
-    price: 195,
+    price: 195000,
     oldPrice: null,
     rating: 5,
     reviews: 56,
@@ -56,7 +56,7 @@ export const products = [
     slug: "izza-shoulder",
     name: "izza Shoulder",
     collection: "izza",
-    price: 340, // placeholder — update to match your design
+    price: 340000, // placeholder — update to match your design
     oldPrice: null,
     rating: 5,
     reviews: 42, // placeholder
@@ -70,7 +70,7 @@ export const products = [
     slug: "Enny-shoulder",
     name: "Enny Shoulder",
     collection: "Enny",
-    price: 340, // placeholder — update to match your design
+    price: 340000, // placeholder — update to match your design
     oldPrice: null,
     rating: 5,
     reviews: 42, // placeholder
@@ -84,7 +84,7 @@ export const products = [
     slug: " muiz shoulder",
     name: "muiz Shoulder",
     collection: "muiz",
-    price: 340, // placeholder — update to match your design
+    price: 340000, // placeholder — update to match your design
     oldPrice: null,
     rating: 5,
     reviews: 42, // placeholder
@@ -98,7 +98,7 @@ export const products = [
     slug: "Beebah shoulder",
     name: "Beebah Shoulder",
     collection: "Ember",
-    price: 340, // placeholder — update to match your design
+    price: 340000, // placeholder — update to match your design
     oldPrice: null,
     rating: 5,
     reviews: 42, // placeholder

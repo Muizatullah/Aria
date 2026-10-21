@@ -8,7 +8,7 @@ const CONTACTS = [
     id: "email",
     icon: Mail,
     title: "Email",
-    value: "hello@arialuxe.com",
+    value: "hello@ariadesign.com",
     href: "mailto:hello@ariadesign.com",
     note: "Reply within 4 hours",
   },

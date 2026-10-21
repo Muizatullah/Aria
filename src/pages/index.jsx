@@ -31,7 +31,6 @@
 //   Legal,
 //   Product,
 // };
-
 import Homepage from "./home/Homepage.jsx";
 import Shop from "./shop/Shop.jsx";
 import CollectionPage from "./collectionPage/CollectionPage.jsx";

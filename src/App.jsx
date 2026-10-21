@@ -24,6 +24,7 @@ import {
   Shipping,
   Legal,
   Product,
+  NotFound,
 } from "./pages";
 
 function App() {
@@ -72,6 +73,8 @@ function App() {
             element={<Legal type="accessibility" />}
           />
           <Route path="/product/:slug" element={<Product />} />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 

@@ -204,8 +204,9 @@ import { Link, Navigate, useParams } from "react-router";
 import { Heart, Minus, Plus, Star, Package, Check } from "lucide-react";
 import { products } from "../../data.js";
 import { useShop } from "../../context/ShopContext";
-import ProductCard from "../../components/productCard/ProductCard.jsx";
-import { getExtras, colorNames, sampleReviews } from "./productExtras";
+// import ProductCard from "../../components/productCard/ProductCard.jsx";
+import ProductCard from "../../components/productCard/ProductCard";
+import { getExtras, colorNames, sampleReviews } from "./productextras";
 import { formatPrice } from "../../utils/formatPrice";
 import styles from "./product.module.css";
 

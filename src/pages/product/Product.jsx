@@ -206,7 +206,7 @@ import { products } from "../../data.js";
 import { useShop } from "../../context/ShopContext";
 // import ProductCard from "../../components/productCard/ProductCard.jsx";
 import ProductCard from "../../components/productCard/ProductCard";
-import { getExtras, colorNames, sampleReviews } from "./productextras";
+import { getExtras, colorNames, sampleReviews } from "./Productextras";
 import { formatPrice } from "../../utils/formatPrice";
 import styles from "./product.module.css";
 

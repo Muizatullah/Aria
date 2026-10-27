@@ -7,6 +7,12 @@ import image4 from "./assets/image4.jpeg";
 
 import image5 from "./assets/image5.jpeg";
 import image6 from "./assets/image6.jpeg";
+import image20 from "./assets/image20.jpeg"
+import image21 from "./assets/image21.jpeg"
+import image13 from "./assets/image13.jpeg"
+import image11 from "./assets/image11.jpeg"
+import image17 from "./assets/image17.jpeg"
+import image19 from "./assets/image19.jpeg"
 
 export const products = [
   {
@@ -48,7 +54,7 @@ export const products = [
     reviews: 56,
     badges: [],
     colors: ["#1a1a1a", "#3a3a3a"],
-    image: image3,
+    image: image20,
     featured: true,
   },
   {
@@ -62,7 +68,7 @@ export const products = [
     reviews: 42, // placeholder
     badges: ["NEW"],
     colors: ["#e8500e", "#1a1a1a"],
-    image: image4,
+    image: image21,
     featured: true,
   },
   {
@@ -76,7 +82,7 @@ export const products = [
     reviews: 42, // placeholder
     badges: ["NEW"],
     colors: ["#e8500e", "#1a1a1a"],
-    image: image4,
+    image: image13,
     featured: true,
   },
   {
@@ -90,7 +96,7 @@ export const products = [
     reviews: 42, // placeholder
     badges: ["NEW"],
     colors: ["#e8500e", "#1a1a1a"],
-    image: image4,
+    image: image11,
     featured: true,
   },
   {
@@ -104,7 +110,7 @@ export const products = [
     reviews: 42, // placeholder
     badges: ["NEW"],
     colors: ["#e8500e", "#1a1a1a"],
-    image: image4,
+    image: image17,
     featured: true,
   },
 ];
@@ -138,7 +144,7 @@ export const shopCollection = [
     id: "ember",
     name: "Ember",
     tagline: "Warm, confident, alive.",
-    image: image2,
+    image: image19,
   },
   {
     id: "solstice",

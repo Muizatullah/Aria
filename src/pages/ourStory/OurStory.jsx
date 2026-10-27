@@ -1,4 +1,4 @@
-import storyImage from "../../assets/image1.jpeg";
+import storyImage from "../../assets/image15.jpeg";
 import styles from "./ourStory.module.css";
 
 const TIMELINE = [

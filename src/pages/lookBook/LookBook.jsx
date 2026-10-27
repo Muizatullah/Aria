@@ -1,5 +1,6 @@
-import look1 from "../../assets/image2.jpeg";
-import look2 from "../../assets/image5.jpeg";
+import look1 from "../../assets/lookbook1.jpeg";
+import look2 from "../../assets/lookbook2.jpeg";
+import look3 from "../../assets/lookbook3.jpeg";
 import styles from "./lookBook.module.css";
 
 // `span` is how many of the 12 grid columns the photo takes up.
@@ -8,6 +9,7 @@ import styles from "./lookBook.module.css";
 const LOOKS = [
   { id: 1, image: look1, alt: "ARIA lookbook — editorial look 1", span: 7 },
   { id: 2, image: look2, alt: "ARIA lookbook — editorial look 2", span: 5 },
+  { id: 3, image: look3, alt: "ARIA lookbook — editorial look 3", span: 5 },
 ];
 
 function LookBook() {

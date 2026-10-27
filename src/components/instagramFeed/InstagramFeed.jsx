@@ -1,7 +1,7 @@
 import image1 from "../../assets/image1.jpeg";
-import image2 from "../../assets/image2.jpeg";
+import image22 from "../../assets/image22.jpeg";
 import image3 from "../../assets/image3.jpeg";
-import image4 from "../../assets/image4.jpeg";
+import image18 from "../../assets/image18.jpeg";
 import image5 from "../../assets/image5.jpeg";
 import image6 from "../../assets/image6.jpeg";
 import styles from "./instagramFeed.module.css";
@@ -9,7 +9,7 @@ import styles from "./instagramFeed.module.css";
 const HANDLE = "ariadesign.ng";
 const PROFILE_URL = `https://www.instagram.com/${HANDLE}`;
 
-const POSTS = [image1, image2, image3, image4, image5, image6];
+const POSTS = [image1, image22, image3, image18, image5, image6];
 
 // Inline SVG — lucide-react no longer ships brand icons in newer versions
 function InstagramIcon({ size = 32 }) {

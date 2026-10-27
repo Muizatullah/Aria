@@ -1,6 +1,8 @@
 import { Star } from "lucide-react";
-import image3 from "../../assets/image3.jpeg";
+import image14 from "../../assets/image14.jpeg";
 import image4 from "../../assets/image4.jpeg";
+import image22 from "../../assets/image22.jpeg";
+import image18 from "../../assets/image18.jpeg";
 import styles from "./testimonials.module.css";
 
 // Add the other two reviews from your design to this array (same shape).
@@ -9,10 +11,10 @@ const REVIEWS = [
     id: 1,
     rating: 5,
     quote:
-      "The Leelah Tote is hands-down the most beautiful bag I've ever owned. Gets compliments every single day. Worth every penny and more.",
+      "Hi ARIA I just got my bag and I'm so impressed! The quality beat my expectation fr. Well done!",
     name: "Leelah K.",
     product: "Leelah Clutch",
-    avatar: image3,
+    avatar: image14,
   },
   {
     id: 2,
@@ -27,19 +29,19 @@ const REVIEWS = [
     id: 3,
     rating: 5,
     quote:
-      "I was nervous ordering online but the packaging alone made me feel like I'd walked into a luxury boutique. The Ember Crossbody is perfect — compact but fits everything.",
+      "OH My God! It's so pretty did you copy and paste? Ha this sis so lovely, I'm so glad i choose this aso oke cause you ate!! .",
     name: "Bakri M.",
     product: "Izza Shoulder",
-    avatar: image4,
+    avatar: image22,
   },
   {
     id: 4,
     rating: 5,
     quote:
-      "I was nervous ordering online but the packaging alone made me feel like I'd walked into a luxury boutique. The Ember Crossbody is perfect — compact but fits everything.",
+      "The Leelah Tote is hands-down the most beautiful bag I've ever owned. Gets compliments every single day. Worth every penny and more.",
     name: "Bakri M.",
     product: "Izza Shoulder",
-    avatar: image4,
+    avatar: image18,
   },
 ];
 
